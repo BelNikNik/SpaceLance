@@ -49,8 +49,8 @@ if (isMobile.any()) {
 
 
 // Меню бургер
-const iconMenu = document.querySelector('.header-main__menu-icon');
-const menuBody = document.querySelector('.aside');
+const iconMenu = document.querySelector('.menu__icon');
+const menuBody = document.querySelector('.menu__list');
 if (iconMenu) {
 	iconMenu.addEventListener("click", function (e) {
 		document.body.classList.toggle('_lock')
@@ -87,78 +87,3 @@ if (menuLinks.length > 0) {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', () => { // структура документа загружена   
-
-	new Chart( // инициализируем плагин
-		document.querySelector('.chart'), // первым параметром передаем элемент canvas по селектору
-		// вторым параметром передаем настройки в виде объекта
-		{
-			type: 'bar', // тип графика, в данном случае линейный
-			data: { // общие данные графика в виде объекта
-				labels: ['2020', '2019', '2018', '2017'], // метки по оси X
-				datasets: [ // набор данных, который будет отрисовываться в виде массива с объектами
-					{
-						label: '', // название для определенного графика в виде строки
-						data: [1, 6, 5, 8], // данные в виде массива с числами, количество должно совпадать с количеством меток по оси X
-						backgroundColor: [
-							'rgba(38, 185, 255, 1)',
-							'rgba(46, 230, 255, 1)',
-							'rgba(38, 185, 255, 1)',
-							'rgba(45, 142, 255, 1)',
-						],
-					}
-				]
-			},
-			options: {
-			} // дополнительные опции для графика в виде объекта, если не нужны - передаем пустой объект
-		}
-	);
-})
-
-
-
-const pieChart = new Chart(
-	document.getElementById('pieChart'),
-	{
-		type: 'pie',
-		data: {
-			//labels: ['75%', '25%'],
-			datasets: [
-				{
-					label: '',
-					data: [25, 75],
-					backgroundColor: [
-						'#43E9FF',
-						'#656CFF'
-					],
-					borderColor: [
-						'#43E9FF',
-						'#656CFF'
-					],
-				}
-			]
-		},
-		options: {
-		}
-	}
-);
-
-const ChartTwo = new Chart(
-	document.getElementById('chartTwo'),
-	{
-		type: 'line',
-		data: {
-			labels: ['', '', '', '', '', '', '', '', '', ''],
-			datasets: [
-				{
-					label: '',
-					data: [0, 5, 2, 6, 1, 8, 3, 7, 0, 10],
-					borderColor: '#43E9FF',
-					borderWidth: 1,
-				}
-			],
-		},
-		options: {
-		}
-	}
-);
