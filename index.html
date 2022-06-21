@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="scss/style.scss">
 	<link rel="stylesheet" href="css/iconfonts.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 	<title>spacelance</title>
 </head>
 
@@ -19,19 +20,19 @@
 					<a href="#" class="header__logo">
 						<img src="img/header/logo.png" alt="header__logo">
 					</a>
-					<nav class="header__menu menu">
+					<nav class="header__menu menu page__section_1">
 						<div class="menu__icon">
 							<span></span>
 						</div>
 						<ul class="menu__list">
 							<li class="menu__item item-home">
-								<a href="#" class="menu__link link-home">Home</a>
+								<a data-goto=".page__section_1" href="#" class="menu__link link-home">Home</a>
 							</li>
 							<li class="menu__item">
-								<a href="#" class="menu__link">Find work</a>
+								<a data-goto=".page__section_2" href="#" class="menu__link">Find work</a>
 							</li>
 							<li class="menu__item">
-								<a href="#" class="menu__link">Find Freelancers</a>
+								<a data-goto=".page__section_3" href="#" class="menu__link">Find Freelancers</a>
 							</li>
 							<li class="menu__item logIn">
 								<a href="#" class="menu__link">Log In</a>
@@ -77,7 +78,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="page__work work">
+				<div class="page__work work page__section_2">
 					<div class="work__container _container">
 						<div class="work__body">
 							<div class="work__column">
@@ -110,7 +111,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="page__find find">
+				<div class="page__find find page__section_3">
 					<div class="find__container _container">
 						<div class="find__body">
 							<div class="find__column">
@@ -149,55 +150,115 @@
 									<h2 class="header-works__title title">Recently Posted <span>Works</span></h2>
 								</div>
 								<div class="header-works__buttons">
-									<a href="#" class="header-works__btn-prev">
-										<img src="img/main/works/arrowPrev.svg" alt="arrowPrev">
-									</a>
-									<a href="#" class="header-works__btn-next">
-										<img src="img/main/works/arrowNext.svg" alt="arrowNext">
-									</a>
+									<div class="header-works__prev"></div>
+									<div class="header-works__next"></div>
 								</div>
 							</div>
-							<div class="works__body">
-								<div class="works__column">
-									<div class="works__item">
-										<div class="works__icon">
-											<img src="img/main/works/01.png" alt="work">
-										</div>
-										<h3 class="works__title">Logo Design</h3>
-										<div class="works__text text">Need a professional logo with writing underneath for our
-											jewellery company
-										</div>
-										<div class="works__price">
-											<div class="works__value">Highest bid <br>$500</div>
-											<a href="#" class="works__link">Apply now</a>
-										</div>
-									</div>
-								</div>
-								<div class="works__column">
-									<div class="works__item">
-										<div class="works__icon">
-											<img src="img/main/works/02.png" alt="work">
-										</div>
-										<h3 class="works__title">Graphic Design</h3>
-										<div class="works__text text">We need a graphic designer with UI/UX skills for our
-											Furniture company</div>
-										<div class="works__price">
-											<div class="works__value">Highest bid <br>$500</div>
-											<a href="#" class="works__link">Apply now</a>
+							<div class="works-slider swiper">
+								<div class="works-slider__body swiper-wrapper">
+									<div class="works-slider__slide swiper-slide">
+										<div class="works-slider__column">
+											<div class="works-slider__item">
+												<div class="works-slider__icon">
+													<img src="img/main/works/01.png" alt="work">
+												</div>
+												<h3 class="works-slider__title">Logo Design</h3>
+												<div class="works-slider__text text">Need a professional logo with writing
+													underneath for
+													our
+													jewellery company
+												</div>
+												<div class="works-slider__price">
+													<div class="works-slider__value">Highest bid <br>$500</div>
+													<a href="#" class="works-slider__link">Apply now</a>
+												</div>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="works__column">
-									<div class="works__item">
-										<div class="works__icon">
-											<img src="img/main/works/03.png" alt="work">
+									<div class="works-slider__slide swiper-slide">
+										<div class="works-slider__column">
+											<div class="works-slider__item">
+												<div class="works-slider__icon">
+													<img src="img/main/works/02.png" alt="work">
+												</div>
+												<h3 class="works-slider__title">Graphic Design</h3>
+												<div class="works-slider__text text">We need a graphic designer with UI/UX skills
+													for our
+													Furniture company</div>
+												<div class="works-slider__price">
+													<div class="works-slider__value">Highest bid <br>$500</div>
+													<a href="#" class="works-slider__link">Apply now</a>
+												</div>
+											</div>
 										</div>
-										<h3 class="works__title">Need a SEO</h3>
-										<div class="works__text text">Need a SEO for our company who will let our company to a
-											higher level</div>
-										<div class="works__price">
-											<div class="works__value">Highest bid <br>$300</div>
-											<a href="#" class="works__link">Apply now</a>
+									</div>
+									<div class="works-slider__slide swiper-slide">
+										<div class="works-slider__column">
+											<div class="works-slider__item">
+												<div class="works-slider__icon">
+													<img src="img/main/works/03.png" alt="work">
+												</div>
+												<h3 class="works-slider__title">Need a SEO</h3>
+												<div class="works-slider__text text">Need a SEO for our company who will let our
+													company to a
+													higher level</div>
+												<div class="works-slider__price">
+													<div class="works-slider__value">Highest bid <br>$300</div>
+													<a href="#" class="works-slider__link">Apply now</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="works-slider__slide swiper-slide">
+										<div class="works-slider__column">
+											<div class="works-slider__item">
+												<div class="works-slider__icon">
+													<img src="img/main/works/01.png" alt="work">
+												</div>
+												<h3 class="works-slider__title">Logo Design</h3>
+												<div class="works-slider__text text">Need a professional logo with writing
+													underneath for our
+													jewellery company
+												</div>
+												<div class="works-slider__price">
+													<div class="works-slider__value">Highest bid <br>$500</div>
+													<a href="#" class="works-slider__link">Apply now</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="works-slider__slide swiper-slide">
+										<div class="works-slider__column">
+											<div class="works-slider__item">
+												<div class="works-slider__icon">
+													<img src="img/main/works/02.png" alt="work">
+												</div>
+												<h3 class="works-slider__title">Graphic Design</h3>
+												<div class="works-slider__text text">We need a graphic designer with UI/UX skills
+													for our
+													Furniture company</div>
+												<div class="works-slider__price">
+													<div class="works-slider__value">Highest bid <br>$500</div>
+													<a href="#" class="works-slider__link">Apply now</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="works-slider__slide swiper-slide">
+										<div class="works-slider__column">
+											<div class="works-slider__item">
+												<div class="works-slider__icon">
+													<img src="img/main/works/03.png" alt="work">
+												</div>
+												<h3 class="works-slider__title">Need a SEO</h3>
+												<div class="works-slider__text text">Need a SEO for our company who will let our
+													company to a
+													higher level</div>
+												<div class="works-slider__price">
+													<div class="works-slider__value">Highest bid <br>$300</div>
+													<a href="#" class="works-slider__link">Apply now</a>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -205,18 +266,17 @@
 						</div>
 					</div>
 				</div>
-			</div>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__body">
 					<div class="footer__column">
-						<a href="#" class="footer__logo">
+						<a href="#" class="footer__logo page__section_1">
 							<img src="img/footer/logo.png" alt="footerLogo">
 						</a>
 						<a href="#" class="footer__link">
 							Powerful Freelance Marketplace
-							<br>System with ability to	change the
+							<br>System with ability to change the
 							<br>Users (Freelancers & Clients)
 						</a>
 						<div class="footer__social">
@@ -277,6 +337,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

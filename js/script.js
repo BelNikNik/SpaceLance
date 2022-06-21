@@ -87,3 +87,37 @@ if (menuLinks.length > 0) {
 	}
 }
 
+//--------SWIPER----------//
+
+const swiperWorks = new Swiper('.works-slider', {
+	navigation: {
+		nextEl: '.header-works__next',
+		prevEl: '.header-works__prev'
+	},
+	centerSlidesBounds: true,
+	centerInsufficientSlides: true,
+	centerSlides: true,
+	loop: true,
+	autoHeight: true,
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 40
+		},
+		710: {
+			slidesPerView: 2,
+			spaceBetween: 20
+		},
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 20
+		},
+		1250: {
+			slidesPerView: 3,
+			spaceBetween: 76
+		},
+	},
+	autoplay: {
+		delay: 3000,
+	},
+})
